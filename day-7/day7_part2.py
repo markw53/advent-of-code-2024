@@ -41,7 +41,7 @@ def parse_input(file_path):
                 equations.append((test_value, nums))
     return equations
 
-file_path = "/home/mark-workman/Documents/coding/advent-of-code-2024/day-7/input7.txt" 
+file_path = "/home/markworkman/Documents/coding/advent-of-code-2024/day-7/input7.txt" 
 
 equations = parse_input(file_path)
 result = find_matching_calibrations(equations)
