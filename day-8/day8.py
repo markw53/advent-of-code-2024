@@ -53,7 +53,7 @@ def calculate_antinodes(antennas, map_width, map_height):
     return len(antinodes)
 
 # File path to the map
-file_path = '/home/markworkman/Documents/coding/advent-of-code-2024/day-8/input8.txt'
+file_path = '/home/mworkman/advent-of-code-2024/day-8/input8.txt'
 
 # Parse the antenna map
 antennas, map_width, map_height = parse_map(file_path)
