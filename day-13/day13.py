@@ -12,24 +12,21 @@ def parse_input(filename):
             b_line = lines[i+1].strip()
             prize_line = lines[i+2].strip()
 
-            # Parse the A button
             a_parts = a_line.split(',')
             A_x = int(a_parts[0].split('+')[1].strip())
             A_y = int(a_parts[1].split('+')[1].strip())
 
-            # Parse the B button
             b_parts = b_line.split(',')
             B_x = int(b_parts[0].split('+')[1].strip())
             B_y = int(b_parts[1].split('+')[1].strip())
 
-            # Parse the Prize
             prize_parts = prize_line.split(',')
             Prize_x = int(prize_parts[0].split('=')[1].strip())
             Prize_y = int(prize_parts[1].split('=')[1].strip())
 
             machines.append({'A': (A_x, A_y), 'B': (B_x, B_y), 'Prize': (Prize_x, Prize_y)})
 
-            i += 4  # Move to the next set of lines
+            i += 4  
 
     return machines
 
@@ -60,8 +57,7 @@ def find_minimum_tokens(machines):
 
     return total_prizes, total_cost
 
-# Example usage:
-filename = '/home/mworkman/advent-of-code-2024/day-13/input13.txt'  # Replace with your actual file name
+filename = '/home/mworkman/advent-of-code-2024/day-13/input13.txt'  
 machines = parse_input(filename)
 prizes, cost = find_minimum_tokens(machines)
 print(f"Maximum prizes won: {prizes}")
