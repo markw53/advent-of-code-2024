@@ -21,13 +21,10 @@ def calculate_antinodes(antennas, width, height):
                 x1, y1 = positions[i]
                 x2, y2 = positions[j]
                 
-                # Calculate potential antinodes
-                # Antinode 1: (2*x1 - x2, 2*y1 - y2)
                 ax1, ay1 = 2 * x1 - x2, 2 * y1 - y2
                 if 0 <= ax1 < width and 0 <= ay1 < height:
                     antinodes.add((ax1, ay1))
                 
-                # Antinode 2: (2*x2 - x1, 2*y2 - y1)
                 ax2, ay2 = 2 * x2 - x1, 2 * y2 - y1
                 if 0 <= ax2 < width and 0 <= ay2 < height:
                     antinodes.add((ax2, ay2))
@@ -39,7 +36,6 @@ def count_unique_antinodes(filename):
     antinodes = calculate_antinodes(antennas, width, height)
     return len(antinodes)
 
-# Example usage:
-filename = '/home/mworkman/advent-of-code-2024/day-8/input8.txt'  # Replace with your actual file name
+filename = '/home/mworkman/advent-of-code-2024/day-8/input8.txt'  
 unique_antinodes = count_unique_antinodes(filename)
 print(f"Number of unique antinode locations: {unique_antinodes}")
